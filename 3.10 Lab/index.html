@@ -8,7 +8,26 @@
    <h1>Join a social network</h1>
    
    <!-- Add the form below -->
-   
+   <form action="https://wp.zybooks.com/form-viewer.php" method="POST" enctype="multipart/form-data">
+   <div>
+      <label>Full Name: </label>
+      <input id="fullName" name="fullName" required>
+   </div>
+   <div>
+      <label>Email Address: </label>
+      <input id="emailAddress" name="emailAddress" required>
+   </div>
+   <div>
+      <label>About you: </label>
+      <textarea name="about" rows="3" cols="50"></textarea>
+   </div>
+   <div>
+      <label>Photo: </label>
+      <input type="file" name="picture" id="picture">
+   </div>
+   <div>
+      <input type="submit">
+   </div>
 </body>
 
 </html>
