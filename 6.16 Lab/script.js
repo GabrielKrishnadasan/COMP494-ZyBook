@@ -6,4 +6,3 @@ function isStrongPassword(password) {
     return true;
 }
 
-console.log(isStrongPassword())
