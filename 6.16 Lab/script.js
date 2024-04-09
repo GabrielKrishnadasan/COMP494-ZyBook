@@ -1,2 +1,9 @@
 // Your solution goes here 
-fun
+function isStrongPassword(password) {
+    if (password.length < 8 || password.toLowerCase() === password || password.indexOf("password") != -1){
+        return false;
+    }
+    return true;
+}
+
+console.log(isStrongPassword())
