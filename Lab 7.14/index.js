@@ -9,40 +9,41 @@ function buildDistributionArray(scoresArray) {
 
    for(i = 0; i < scoresArray.length; i++) {
       let score = scoresArray[i];
-
       if (score >= 90) {
-         ret[0]++;
+         ret[0] = ret[0] + 1;
       } else {
          if (score >= 80) {
-            ret[1]++;
+            ret[1] = ret[1] + 1;
          } else {
             if (score >= 70) {
-               ret[2]++;
+               ret[2] = ret[2] + 1;
             } else {
                if (score >= 60) {
-                  ret[3]++;
+                  ret[3] = ret[3] + 1;
                } else {
-                  ret[4]++
+                  ret[4] = ret[4] + 1;
                }
             }
          }
       }
-      return ret;
    }
+   return ret;
 }
 
 function setTableContent(userInput) {
    // TODO: Compete the function
    var distArray = buildDistributionArray(parseScores(userInput));
-   var firstRow = document.getElementsById("firstRow")[0];
-   var thirdRow = document.getElementById("thirdRow")[0];
+   var firstRow = document.getElementById("firstRow");
+   var thirdRow = document.getElementById("thirdRow");
 
    for (i = 0; i < 5; i++) {
       var td = document.createElement("td");
 
       var div = document.createElement("div");
-      div.style = `height:${distArray * 10}px`;
+      div.setAttribute("style", `height:${distArray[i] * 10}px`);
       div.className = `bar${i}`;
+      console.log(div.style);
+      console.log(div.className)
 
       td.appendChild(div);
       
