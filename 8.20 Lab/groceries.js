@@ -62,7 +62,7 @@ function clearBtnClick() {
 // Complete the functions below
 
 function loadList() {
-   const storedList = localStorage.getItem('groceryList');
+   const storedList = localStorage.getItem('list');
    if (storedList) {
       return storedList.split(',');
    } else {
@@ -72,9 +72,9 @@ function loadList() {
  
 function saveList(groceryList) {
    const listString = groceryList.join(',');
-   localStorage.setItem('groceryList', listString);
+   localStorage.setItem('list', listString);
 }
  
 function clearList() {
-   localStorage.removeItem('groceryList');
+   localStorage.removeItem('list');
 }
