@@ -64,8 +64,8 @@ function selectionChanged() {
 	// Your code goes here
 	const winnerParagraph = document.querySelector("#winner")
 	if (selectedHero.battle(selectedVillain)) {
-		winnerParagraph.innerHTML = selectedHero.alias;
+		winnerParagraph.innerHTML = "Winner: " + selectedHero.alias + "!";
 	} else {
-		winnerParagraph.innerHTML = selectedVillain.alias;
+		winnerParagraph.innerHTML = "Winner: " + selectedVillain.alias + "!";
 	}
 }
