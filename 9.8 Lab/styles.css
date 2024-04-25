@@ -112,7 +112,7 @@ main > section {
    }
 
    .vacation-container {
-      align-items: right;
+      flex-direction: right;
    }
 
    .vacation-container > div {
