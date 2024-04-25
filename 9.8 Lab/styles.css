@@ -112,7 +112,7 @@ main > section {
    }
 
    .vacation-container {
-      flex-direction: right;
+      flex-direction: row;
    }
 
    .vacation-container > div {
